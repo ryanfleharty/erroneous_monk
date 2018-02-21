@@ -1,0 +1,7 @@
+<h1>Now editing {{artist.name}}</h1>
+<form action="/artists/update" method="post">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="{{artist.name}}">
+    <input type="submit" value="Update">
+</form>

@@ -1,0 +1,14 @@
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<h1>Welcome to Thelonious Monk's list of great Jazz artists</h1>
+<a href="/artists/new">Add an artist</a>
+{% for artist in artists %}
+<div>
+    <a href="/artists/{{artist.id}}"><h2>{{artist.name}}</h2></a>
+    <a href="/artists/{{artist.id}}/edit">Edit {{artist.name}}</a>
+</div>

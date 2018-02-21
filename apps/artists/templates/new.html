@@ -1,0 +1,13 @@
+<h1>Add a new artist to the hall of Jazz legends</h1>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<form action="/artists/create">
+<label for="name">Name:</label>
+<input type="text" name="name">
+<input type="submit" value="Create">
+</form>

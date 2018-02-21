@@ -1,0 +1,23 @@
+<a href="/artists">Back home</a>
+<h1>Here is the jazz legend {{artist.name}}</h1>
+<h2>Discography</h2>
+{% for album in artist.albums %}
+    <p>{{album.year}} - {{album.title}}</p>
+{% endfor %}
+
+<h3>Add an album</h3>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<form action="/artists/{{artist.id}}/create_album" method="post">
+    {% csrf_token %}
+    <label for="album_title">Title:</label>
+    <input type="text" name="title">
+    <label for="year">Year:</label>
+    <input type="number" name="year">
+    <input type="submit" value="Add this album">
+</form>
