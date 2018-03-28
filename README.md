@@ -16,4 +16,4 @@ Consider the app fixed when you can do the following tasks:
 
 <h2>Automated Tests</h2>
 
-You can use the automated tests provided in tests.py to test whether your templates show the correct information. Simply run the command "python manage.py test" to run the tests until there are no failures.
+You can use the automated tests provided in tests.py to test some of these features. Simply run the command "python manage.py test" to run the tests until there are no failures.
