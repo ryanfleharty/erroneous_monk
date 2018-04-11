@@ -16,4 +16,4 @@ Consider the app fixed when you can do the following tasks:
 
 <h2>Automated Tests</h2>
 
-You can use the automated tests provided in tests.py to test some of these features. Simply run the command "python manage.py test" to run the tests until there are no failures.
+You can use the automated tests provided in tests.py to test some of these features. Simply run the command "python manage.py test" to run the tests until there are no failures. You must still manually test the app to make sure it works when you submit forms, etc.
